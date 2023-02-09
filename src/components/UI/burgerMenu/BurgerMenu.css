@@ -1,0 +1,59 @@
+.burgerMenu{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 50px;
+    left: 0;
+    transform: translateX(-130%);
+    transition: all 0.3s;
+}
+.burgerMenu.activeBurgerMenu{
+    transform: translateX(0);
+}
+.blur{
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(2px);
+    position: absolute;
+    left: 30%;
+}
+.burgerMenuContent{
+    width: 30%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+.burgerMenuHeader{
+    font-size: 25px;
+    color: white;
+    border-bottom: 1px solid white;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+}
+.burgerMenuContent ul li{
+    margin-block: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.burgerMenuContent ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+}
+.burgerMenuContent ul li img{
+    width: 20px;
+}
+
+@media screen and (max-width:768px) {
+    .burgerMenuContent{
+        width: 100%;
+    }
+    .blur{
+        backdrop-filter: none
+    }
+}
